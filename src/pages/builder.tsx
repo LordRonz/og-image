@@ -2,13 +2,16 @@
 import type { NextPage } from 'next';
 import queryString from 'query-string';
 import * as React from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
+import toast, { Toaster } from 'react-hot-toast';
 
 import Button from '@/components/buttons/Button';
 import Input from '@/components/forms/Input';
 import SelectInput from '@/components/forms/SelectInput';
 import Seo from '@/components/Seo';
 import ORIGIN_URL from '@/constant/originUrl';
+import { toastStyle } from '@/constant/toast';
 import { GeneralQueryEnum } from '@/pages/api/general';
 
 type Query = Record<keyof typeof GeneralQueryEnum | 'ogType', string>;
@@ -111,14 +114,22 @@ const BuilderPage: NextPage = () => {
                     <Button type='submit'>Generate</Button>
                   </div>
                   <div>
-                    <img
-                      key={imgLink}
-                      src={imgLink}
-                      className='w-full bg-gray-500'
-                      alt=''
-                      width='1200'
-                      height='630'
-                    />
+                    <CopyToClipboard
+                      text={imgLink}
+                      onCopy={() =>
+                        toast.success('Copied image URL to clipboard')
+                      }
+                    >
+                      <img
+                        key={imgLink}
+                        src={imgLink}
+                        className='w-full bg-gray-500 cursor-pointer'
+                        alt=''
+                        width='1200'
+                        height='630'
+                        title='Click to copy image URL to clipboard'
+                      />
+                    </CopyToClipboard>
                     <p className='mt-2 text-sm text-primary-50 break-all'>
                       {link}
                     </p>
@@ -129,6 +140,17 @@ const BuilderPage: NextPage = () => {
           </div>
         </section>
       </main>
+      <Toaster
+        toastOptions={{
+          style: toastStyle,
+          loading: {
+            iconTheme: {
+              primary: '#eb2754',
+              secondary: 'black',
+            },
+          },
+        }}
+      />
     </>
   );
 };
