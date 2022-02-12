@@ -108,7 +108,7 @@ const BuilderPage: NextPage = () => {
                       <option value='dark'>dark</option>
                       <option value='light'>light</option>
                     </SelectInput>
-                    <Button>Generate</Button>
+                    <Button type='submit'>Generate</Button>
                   </div>
                   <div>
                     <img
