@@ -27,7 +27,7 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
                 <img src="${ORIGIN_URL}/images/logo.jpg" alt="Favicon" />
                 <div class="right">
                   <h2>${query.type} by</h2>
-                  <p class="gradient">Theodorus Clarence</p>
+                  <p class="gradient">Aaron Christopher</p>
                 </div>
               </header>
               <h1>${query.title}</h1>
@@ -36,7 +36,7 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
                   ? `<p class="description">${query.description}</p>`
                   : ''
               }
-              <p class="site-name">theodorusclarence.com</p>
+              <p class="site-name">lordronz.vercel.app</p>
             </div>
           </body>
         </html>

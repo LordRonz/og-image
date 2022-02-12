@@ -46,7 +46,7 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
               <div class="split">
                 <div class="left">
                   <h3 class="link">
-                    theodorusclarence.com/blog
+                    lordronz.vercel.app/blog
                   </h3>
                   <h1 class="title">
                     <span class="gradient">
@@ -56,8 +56,8 @@ export default withOGImage<'query', keyof typeof QueryEnum>({
                   <div class="social">
                     <img class="social_img" src="https://res.cloudinary.com/theodorusclarence/image/upload/c_fill,g_auto:face,h_1000,w_1000/v1636335597/theodorusclarence/clarence_gu3cxx.jpg">
                     <div class="social_info">
-                      <p class="name">Theodorus Clarence</p>
-                      <p class="twitter">@th_clarence</p>
+                      <p class="name">Aaron Christopher</p>
+                      <p class="twitter">@lordronz</p>
                     </div>
                   </div>
                 </div>
