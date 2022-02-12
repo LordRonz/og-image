@@ -1,6 +1,3 @@
-export const ORIGIN_URL =
-  process.env.NODE_ENV === 'production'
-    ? 'https://lr-og.vercel.app'
-    : 'http://localhost:3000';
+export const ORIGIN_URL = 'https://lr-og.vercel.app';
 
 export default ORIGIN_URL;
