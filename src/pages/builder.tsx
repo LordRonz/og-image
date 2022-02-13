@@ -60,13 +60,13 @@ const BuilderPage: NextPage = () => {
 
       <main>
         <section className='bg-black'>
-          <div className='min-h-screen py-20 layout'>
+          <div className='layout min-h-screen py-20'>
             <h1>Builder</h1>
 
             <FormProvider {...methods}>
               <form onSubmit={handleSubmit(onSubmit)}>
-                <div className='grid md:grid-cols-[2fr,3fr] gap-8 items-center'>
-                  <div className='flex flex-col gap-3 mt-8 md:max-w-sm'>
+                <div className='grid items-center gap-8 md:grid-cols-[2fr,3fr]'>
+                  <div className='mt-8 flex flex-col gap-3 md:max-w-sm'>
                     <SelectInput
                       id='ogType'
                       label='ogType'
@@ -123,14 +123,14 @@ const BuilderPage: NextPage = () => {
                       <img
                         key={imgLink}
                         src={imgLink}
-                        className='w-full bg-gray-500 cursor-pointer'
+                        className='w-full cursor-pointer bg-gray-500'
                         alt=''
                         width='1200'
                         height='630'
                         title='Click to copy image URL to clipboard'
                       />
                     </CopyToClipboard>
-                    <p className='mt-2 text-sm text-primary-50 break-all'>
+                    <p className='mt-2 break-all text-sm text-primary-50'>
                       {link}
                     </p>
                   </div>

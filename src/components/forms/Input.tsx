@@ -45,18 +45,18 @@ const Input = ({
           readOnly={readOnly}
           className={clsx(
             readOnly
-              ? 'bg-gray-700 focus:ring-0 cursor-not-allowed border-gray-900 focus:border-gray-900'
+              ? 'cursor-not-allowed border-gray-900 bg-gray-700 focus:border-gray-900 focus:ring-0'
               : errors[id]
-              ? 'focus:ring-red-500 border-red-500 focus:border-red-500'
-              : 'focus:ring-primary-500 border-gray-900 focus:border-primary-500',
-            'block w-full rounded-md shadow-sm p-2'
+              ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+              : 'border-gray-900 focus:border-primary-500 focus:ring-primary-500',
+            'block w-full rounded-md p-2 shadow-sm'
           )}
           placeholder={placeholder}
           aria-describedby={id}
         />
 
         {!hideError && errors[id] && (
-          <div className='absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none'>
+          <div className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3'>
             <HiExclamationCircle className='text-xl text-red-500' />
           </div>
         )}
