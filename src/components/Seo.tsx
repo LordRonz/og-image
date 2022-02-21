@@ -5,11 +5,11 @@ import { openGraph } from '@/lib/helper';
 
 const defaultMeta = {
   title: 'OG Image Generator',
-  siteName: process.env.NEXT_PUBLIC_HOSTNAME || 'lordronz.github.io',
+  siteName: process.env.NEXT_PUBLIC_HOSTNAME || 'lr-og.vercel.app',
   description: 'Open Graph Image Generator.',
   url: process.env.NEXT_PUBLIC_HOSTNAME
     ? `https://${process.env.NEXT_PUBLIC_HOSTNAME}`
-    : 'https://lordronz.github.io',
+    : 'https://lr-og.vercel.app',
   image: '/vercel.svg',
   type: 'website',
   robots: 'follow, index',
