@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
+import { openGraph } from '@/lib/helper';
+
 const defaultMeta = {
   title: 'Next.js TypeScript Starter',
   siteName: process.env.NEXT_PUBLIC_HOSTNAME || 'lordronz.github.io',
@@ -29,6 +31,12 @@ const Seo = (props: SeoProps) => {
   meta['title'] = props.templateTitle
     ? `${props.templateTitle} | ${meta.siteName}`
     : meta.title;
+
+  meta['image'] = openGraph({
+    description: meta.description,
+    siteName: props.templateTitle ? meta.siteName : meta.title,
+    templateTitle: props.templateTitle,
+  });
 
   return (
     <Head>
