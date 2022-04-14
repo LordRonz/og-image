@@ -2982,10 +2982,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next-api-og-image@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/next-api-og-image/-/next-api-og-image-2.2.1.tgz#946102987fb557a6b2249fc39fe2631b48ae88db"
-  integrity sha512-cpxHkShMpQpivL/GEPxvxZ+jS2+HxAtRdpaqAcDbLZpeLdpnbZtZW7p6PUuAe6GGIdZdfjeOmuy0ivXdPobIQQ==
+next-api-og-image@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/next-api-og-image/-/next-api-og-image-3.0.0.tgz#f030273304fc321e7eedf86675f3f506337da2a8"
+  integrity sha512-LAFTEj9b8uGnjYSOY8UiCy0NfBXCcnaQj94OKYRt0tf/Y8pzCM83Qj01l9FMkqlMF+n993xYth46XBc9RFU+bw==
   dependencies:
     chrome-aws-lambda "^10.1.0"
     deepmerge "^4.2.2"
