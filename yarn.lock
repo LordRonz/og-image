@@ -2979,10 +2979,10 @@ next-api-og-image@^3.0.0:
     puppeteer-core "^10.4.0"
     twemoji "^13.1.0"
 
-next-sitemap@^2.5.21:
-  version "2.5.21"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.5.21.tgz#ab3be9c99a7ce4687c331cef9e207130cb3af04c"
-  integrity sha512-YlqoGd8Ej3EUgxWYOwvKr84uzstgGurFiLXyZgvi9mdSlRwJW++odwlCPco5qdthX806jzasJwcNPIW45AnXRg==
+next-sitemap@^2.5.23:
+  version "2.5.23"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.5.23.tgz#fbe408ed835911d604a41861e3c46a366a00ebf5"
+  integrity sha512-2MxuYsghAMULZIysC3cwecVceL5eCDlDqiHaOnB+OSiFV7B+0t+xKZJ93nHpJlj+Gcs8NAs1I7fRWKEddMZkZA==
   dependencies:
     "@corex/deepmerge" "^2.6.148"
     minimist "^1.2.6"
