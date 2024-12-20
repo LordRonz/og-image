@@ -47,9 +47,9 @@ const Input = ({
             readOnly
               ? 'cursor-not-allowed border-gray-900 bg-gray-700 focus:border-gray-900 focus:ring-0'
               : errors[id]
-              ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
-              : 'border-gray-900 focus:border-primary-500 focus:ring-primary-500',
-            'block w-full rounded-md p-2 shadow-sm'
+                ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                : 'border-gray-900 focus:border-primary-500 focus:ring-primary-500',
+            'block w-full rounded-md p-2 shadow-sm',
           )}
           placeholder={placeholder}
           aria-describedby={id}
@@ -64,7 +64,9 @@ const Input = ({
       <div className='mt-1'>
         {helperText && <p className='text-xs text-gray-100'>{helperText}</p>}
         {!hideError && errors[id] && (
-          <span className='text-sm text-red-500'>{errors[id].message}</span>
+          <span className='text-sm text-red-500'>
+            {errors[id].message as string}
+          </span>
         )}
       </div>
     </div>

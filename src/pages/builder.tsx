@@ -6,13 +6,13 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
 
+import { GeneralQueryEnum } from '@/app/api/general/type';
 import Button from '@/components/buttons/Button';
 import Input from '@/components/forms/Input';
 import SelectInput from '@/components/forms/SelectInput';
 import Seo from '@/components/Seo';
 import ORIGIN_URL from '@/constant/originUrl';
 import { toastStyle } from '@/constant/toast';
-import { GeneralQueryEnum } from '@/pages/api/general';
 
 type Query = Record<keyof typeof GeneralQueryEnum | 'ogType', string>;
 
@@ -41,7 +41,7 @@ const BuilderPage: NextPage = () => {
       },
       {
         skipEmptyString: true,
-      }
+      },
     );
 
     setLink(qurl);

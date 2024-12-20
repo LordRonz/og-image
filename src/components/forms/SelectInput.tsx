@@ -38,12 +38,13 @@ const SelectInput = ({
     children,
     (child) => {
       if (React.isValidElement(child)) {
-        return React.cloneElement(child, {
-          disabled: child.props.value !== rest?.defaultValue,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        return React.cloneElement(child as any, {
+          disabled: (child.props as typeof rest)?.value !== rest?.defaultValue,
           // selected: child.props.value === rest?.defaultValue,
         });
       }
-    }
+    },
   );
 
   return (
@@ -63,10 +64,10 @@ const SelectInput = ({
             readOnly
               ? 'cursor-not-allowed border-gray-900 bg-gray-800 focus:border-gray-900 focus:ring-0'
               : errors[id]
-              ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
-              : 'border-gray-900 focus:border-primary-500 focus:ring-primary-500',
+                ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                : 'border-gray-900 focus:border-primary-500 focus:ring-primary-500',
             'block w-full rounded-md p-2 shadow-sm',
-            { 'text-gray-100': value === '' }
+            { 'text-gray-100': value === '' },
           )}
           aria-describedby={id}
         >
@@ -87,7 +88,9 @@ const SelectInput = ({
       <div className='mt-1'>
         {helperText && <p className='text-xs text-gray-100'>{helperText}</p>}
         {errors[id] && (
-          <span className='text-sm text-red-500'>{errors[id].message}</span>
+          <span className='text-sm text-red-500'>
+            {errors[id].message as string}
+          </span>
         )}
       </div>
     </div>

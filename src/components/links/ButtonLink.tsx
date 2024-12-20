@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import type { UnstyledLinkProps } from '@/components/links/UnstyledLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
-const enum ButtonVariant {
+export const enum ButtonVariant {
   primary,
   outline,
   ghost,
@@ -61,7 +61,7 @@ const ButtonLink = ({
           'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
         ],
       ],
-      'disabled:cursor-not-allowed'
+      'disabled:cursor-not-allowed',
     )}
   >
     {children}
