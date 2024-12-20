@@ -3,6 +3,8 @@ import { ImageResponse } from 'next/og';
 import ORIGIN_URL from '@/constant/originUrl';
 import { loadGoogleFont } from '@/lib/helper';
 
+export const runtime = 'edge';
+
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
