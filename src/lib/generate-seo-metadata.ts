@@ -15,8 +15,8 @@ export const webUrl = process.env.NEXT_PUBLIC_HOSTNAME
   : WEBSITE_URL;
 
 export const defaultMeta = {
-  title: "Aaron's Links",
-  siteName: "Aaron's Links",
+  title: "Aaron's OpenGraph",
+  siteName: "Aaron's OpenGraph",
   description: SITE_DESCRIPTION,
   url: webUrl,
   image: '/vercel.svg',
@@ -35,7 +35,8 @@ export const defaultMeta = {
     'Personal Website',
     'Developer',
     'Software Engineer',
-    'Links',
+    'OpenGraph',
+    'Image Generator',
   ],
 };
 
