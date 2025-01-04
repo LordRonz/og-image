@@ -4,7 +4,7 @@
  */
 module.exports = {
   // !STARTERCONF Change the siteUrl without additional '/' on the end
-  siteUrl: 'https://lr-og.vercel.app',
+  siteUrl: 'https://og.aaronct.dev',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],

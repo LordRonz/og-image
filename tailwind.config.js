@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 const withOpacity =
@@ -26,6 +26,8 @@ module.exports = {
       colors: {
         // Customize it on globals.css :root
         primary: getColorShades([50, 100, 200, 300, 400, 500, 600, 700]),
+        dark: '#111',
+        light: '#ddd',
       },
     },
   },

@@ -9,7 +9,7 @@ export const openGraph = ({
   siteName,
   templateTitle,
   description,
-  logo = 'https://lr-og.vercel.app/images/logo.jpg',
+  logo = 'https://og.aaronct.dev/images/logo.jpg',
 }: OpenGraphType): string => {
   const ogLogo = encodeURIComponent(logo);
   const ogSiteName = encodeURIComponent(siteName.trim());
@@ -18,7 +18,7 @@ export const openGraph = ({
     : undefined;
   const ogDesc = encodeURIComponent(description.trim());
 
-  return `https://lr-og.vercel.app/api/general?siteName=${ogSiteName}&description=${ogDesc}&logo=${ogLogo}${
+  return `https://go.aaronct.dev/api/general?siteName=${ogSiteName}&description=${ogDesc}&logo=${ogLogo}${
     ogTemplateTitle ? `&templateTitle=${ogTemplateTitle}` : ''
   }`;
 };

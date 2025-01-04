@@ -1,3 +1,3 @@
-export const ORIGIN_URL = 'https://lr-og.vercel.app';
+export const ORIGIN_URL = 'https://og.aaronct.dev';
 
 export default ORIGIN_URL;
